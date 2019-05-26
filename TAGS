@@ -1,0 +1,44 @@
+
+./Web/Scotty/Session.hs,1418
+module Web.Scotty.SessionWeb.Scotty.Session2,3
+data Session Session33,34
+   = SessionSession34,35
+   { sess_id sess_id35,36
+   , sess_validUntil sess_validUntil36,37
+   , sess_content sess_content37,38
+type SessionJar SessionJar39,40
+type SessionJar a a39,40
+newtype ScottySM ScottySM41,42
+newtype ScottySM a = ScottySM ScottySM41,42
+newtype ScottySM a = ScottySM { _unSessionManager _unSessionManager41,42
+createSessionManager createSessionManager44,45
+createSessionManager createSessionManager45,46
+modifySession modifySession51,52
+modifySession modifySession52,53
+readSession readSession58,59
+readSession readSession59,60
+readSession' readSession'61,62
+readSession' readSession'62,63
+sessionTTL sessionTTL72,73
+sessionTTL sessionTTL73,74
+sessionIdEntropy sessionIdEntropy75,76
+sessionIdEntropy sessionIdEntropy76,77
+createSession createSession78,79
+createSession createSession79,80
+insertSession insertSession89,90
+insertSession insertSession90,91
+getSession getSession93,94
+getSession getSession94,95
+maintainSessions maintainSessions98,99
+maintainSessions maintainSessions99,100
+setCookie setCookie106,107
+setCookie setCookie107,108
+loadSession loadSession111,112
+loadSession loadSession112,113
+getUserSession getUserSession116,117
+getUserSession getUserSession117,118
+parseCookies parseCookies124,125
+parseCookies parseCookies125,126
+
+./Setup.hs,15
+main main1,2

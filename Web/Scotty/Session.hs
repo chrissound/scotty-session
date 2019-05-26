@@ -13,6 +13,7 @@ import Control.Concurrent.STM
 import Control.Monad.IO.Class (MonadIO, liftIO)
 import Data.Monoid
 import Control.Arrow
+import Control.Monad.Trans.Class
 
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as TL
@@ -41,9 +42,9 @@ type SessionJar a = TVar (HM.HashMap T.Text (Session a))
 newtype ScottySM a = ScottySM { _unSessionManager :: SessionJar a }
 
 -- | Create a new session manager
-createSessionManager :: MonadIO m => ScottyT e m (ScottySM a)
+createSessionManager :: ScottyT e IO (ScottySM a)
 createSessionManager =
-    do storage <- liftIO $ atomically $ newTVar HM.empty
+    do storage <- lift $ atomically $ newTVar HM.empty
        liftIO $ forkIO $ maintainSessions storage
        return $ ScottySM storage
 
